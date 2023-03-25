@@ -39,13 +39,17 @@ const scaleFunc = (x, y, array) => {
     return result;
 };
 
-const rotateFunc = (angle, v) => {
-    const scale = [
+const rotateFunc = (angle, array) => {
+    let result = [];
+    const rotate = [
         [Math.cos(angle), -Math.sin(angle), 0],
         [Math.sin(angle), Math.cos(angle), 0],
         [0, 0, 1],
     ];
-    return multiplyArr(scale, v);
+    array.forEach((v) => {
+        result.push(multiplyArr(rotate, v));
+    });
+    return result;
 };
 
 export { traslateFunc, scaleFunc, rotateFunc };
