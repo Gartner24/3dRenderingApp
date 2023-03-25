@@ -26,13 +26,17 @@ const traslateFunc = (x, y, array) => {
 };
 
 
-const scaleFunc = (x, y, vector) => {
+const scaleFunc = (x, y, array) => {
+    let result = [];
     const scale = [
         [x, 0, 0],
         [0, y, 0],
         [0, 0, 1],
     ];
-    return multiplyArr(scale, vector);
+    array.forEach((v) => {
+        result.push(multiplyArr(scale, v));
+    });
+    return result;
 };
 
 const rotateFunc = (angle, v) => {

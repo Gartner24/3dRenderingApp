@@ -3,7 +3,7 @@ import { traslateFunc, scaleFunc } from '../helpers/arrayFunctions';
 
 const Cube = () => {
    const [traslate, setTraslate] = useState({ x: 200, y: 50 });
-   const [scale, setScale] = useState({ x: 2, y: 2 });
+   const [scale, setScale] = useState({ x: 1, y: 1 });
 
    const puntosInitial = [
       [0, 0, 1],
