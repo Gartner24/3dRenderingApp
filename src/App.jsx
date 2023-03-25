@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import Cube from './components/Cube';
+import Cube2D from './components/Cube2D';
+import Cube3D from './components/Cube3d';
 
 function App() {
-
    return (
       <>
-         <Cube />
+         {/* <Cube2D /> */}
+         <Cube3D />
       </>
    );
 }

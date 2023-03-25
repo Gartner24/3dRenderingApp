@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { traslateFunc, scaleFunc, rotateFunc } from '../helpers/arrayFunctions';
+import { traslateFunc, scaleFunc, rotateFunc } from '../helpers/arrayFunctions2D';
 
-const Cube = () => {
+const Cube2D = () => {
    const [traslate, setTraslate] = useState({ x: 100, y: 100 });
    const [scale, setScale] = useState({ x: 1, y: 1 });
    const [rotate, setRotate] = useState({ x: 0 });
@@ -82,6 +82,7 @@ const Cube = () => {
          setRotate((prev) => ({
             ...prev,
             x: prev.x + 0.5,
+            y: prev.y + 0.5,
          }));
          setPuntos(
             scaleFunc(
@@ -121,4 +122,4 @@ const Cube = () => {
    );
 };
 
-export default Cube;
+export default Cube2D;
